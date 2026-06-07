@@ -1,3 +1,5 @@
+<img width="3780" height="1446" alt="08_github_banner" src="https://github.com/user-attachments/assets/6ff28b56-b3b4-4cc0-a141-301aebea151a" />
+
 # ❤️ Heart Attack Risk Prediction Using Stacked Ensemble Machine Learning
 
 ## Project Overview
