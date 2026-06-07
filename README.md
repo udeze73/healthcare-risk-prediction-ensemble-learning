@@ -195,7 +195,7 @@ Several techniques were investigated:
 
 ### SMOTE Oversampling
 
-Synthetic Minority Oversampling Technique (SMOTE) was evaluated to increase minority-class representation.
+SMOTE produced limited improvement while significantly increasing runtime.
 
 ### Class Weight Balancing
 
@@ -205,7 +205,7 @@ Models were trained using:
 class_weight='balanced'
 ```
 
-This forces the algorithm to pay greater attention to minority-class observations.
+This forces the algorithm to pay greater attention to minority-class observations hence other techniques were explored.
 
 ### XGBoost Class Weighting
 
@@ -280,16 +280,6 @@ KNeighborsClassifier(
 
 ---
 
-### LightGBM
-
-**Strengths**
-
-- Fast training
-- Efficient boosting algorithm
-- Scales well to large datasets
-
----
-
 ## Cross Validation
 
 Stratified K-Fold Cross Validation was used throughout model development.
@@ -314,7 +304,6 @@ The following models generated out-of-fold probability predictions:
 - KNN
 - Random Forest
 - XGBoost
-- LightGBM
 
 Example generated meta-features:
 
@@ -323,7 +312,6 @@ logistic_prob
 knn_prob
 randomforest_prob
 xgboost_prob
-lightgbm_prob
 ```
 
 ---
@@ -359,7 +347,7 @@ Out-of-Fold Probabilities
 Meta Features
     │
     ▼
-Extra Trees Meta Model
+Logistic Regression Model
     │
     ▼
 Final Prediction
@@ -445,7 +433,6 @@ Despite a severe imbalance ratio of approximately 17:1, the model successfully l
 - NumPy
 - Scikit-Learn
 - XGBoost
-- LightGBM
 - Imbalanced-Learn
 - Matplotlib
 - Seaborn
@@ -494,9 +481,7 @@ Potential enhancements include:
 
 - Hyperparameter optimization using Optuna
 - Calibrated probability estimation
-- Explainable AI using SHAP
 - Deployment using FastAPI or Streamlit
-- Automated model monitoring pipeline
 
 ---
 
@@ -511,6 +496,7 @@ Passionate about applying machine learning, predictive analytics, and business i
 ### Connect With Me
 
 - LinkedIn: www.linkedin.com/in/joshua-udeze-394531154
+- UDEZEJOSHUA@GMAIL.COM
 
 ---
 ⭐ If you found this project useful, consider starring the repository.
