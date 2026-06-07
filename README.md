@@ -195,7 +195,7 @@ Several techniques were investigated:
 
 ### SMOTE Oversampling
 
-SMOTE produced limited improvement while significantly increasing runtime.
+SMOTE produced limited improvement while significantly increasing runtime hence other techniques were explored.
 
 ### Class Weight Balancing
 
@@ -205,7 +205,7 @@ Models were trained using:
 class_weight='balanced'
 ```
 
-This forces the algorithm to pay greater attention to minority-class observations hence other techniques were explored.
+This forces the algorithm to pay greater attention to minority-class observations.
 
 ### XGBoost Class Weighting
 
@@ -260,7 +260,7 @@ KNeighborsClassifier(
 
 ---
 
-### Random Forest
+### Extra Trees
 
 **Strengths**
 
@@ -277,6 +277,16 @@ KNeighborsClassifier(
 - Gradient boosting framework
 - Excellent performance on structured data
 - Captures complex feature interactions
+
+---
+
+### LightGBM
+
+**Strengths**
+
+- Fast training
+- Efficient boosting algorithm
+- Scales well to large datasets
 
 ---
 
@@ -302,15 +312,16 @@ The following models generated out-of-fold probability predictions:
 
 - Logistic Regression
 - KNN
-- Random Forest
+- Extra Trees
 - XGBoost
+- LightGBM
 
 Example generated meta-features:
 
 ```text
 logistic_prob
 knn_prob
-randomforest_prob
+etratrees_prob
 xgboost_prob
 ```
 
@@ -398,7 +409,7 @@ These metrics provide a more realistic assessment of model effectiveness.
 | ROC-AUC | 0.89 |
 | Balanced Accuracy | 0.73 |
 | Precision | 0.45 |
-| Recall | 0.50 |
+| Recall | 0.51 |
 | F1 Score | 0.48 |
 
 ---
@@ -451,6 +462,11 @@ heart-attack-risk-prediction-stacked-ensemble/
 ├── images/
 │   ├── project_workflow.png
 │   └── stacking_architecture.png
+│   ├── confusion_matrix.png
+│   └── roc_curve.png
+│   ├── precision_curve.png
+│   └── model_comparison.png
+│   ├── feature_importance.png
 │
 ├── README.md
 ├── requirements.txt
