@@ -375,7 +375,7 @@ Most classification projects use a default threshold of:
 0.50
 ```
 
-This project instead searched multiple thresholds to maximize F1 Score.
+This project instead searched multiple thresholds to maximize F1 Score with a best threshold of 0.87.
 
 Benefits:
 
@@ -408,9 +408,9 @@ These metrics provide a more realistic assessment of model effectiveness.
 | Metric | Score |
 |----------|---------|
 | ROC-AUC | 0.89 |
-| Balanced Accuracy | 0.73 |
+| Balanced Accuracy | 0.74 |
 | Precision | 0.45 |
-| Recall | 0.50 |
+| Recall | 0.51 |
 | F1 Score | 0.48 |
 
 ---
